@@ -1,0 +1,9 @@
+{
+    "dev": {
+        "django_settings": "project.settings",
+        "profile_name": null,
+        "project_name": "backend",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-q7i7zs970"
+    }
+}

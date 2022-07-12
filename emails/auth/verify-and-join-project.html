@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h5>Hi,</h5>
+
+    Use the following link to complete your registration and join the project {{data.project_name}}. <br/>
+
+    <a href="{{data.reset_url}}">{{data.reset_url}}</a> <br/>
+
+    Thank you!
+{% endblock %}

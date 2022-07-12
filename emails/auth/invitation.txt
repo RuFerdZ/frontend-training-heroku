@@ -1,0 +1,10 @@
+Hi,
+
+
+{{invited_by}} has invited you to join the Intrview platform that we use to interview all mid-senior level candidates.
+
+Please click on this <a href="{{data.invitation_link}}">link</a> to activate your account and start assessing candidates.
+
+Thanks,
+{{data.invited_by}}
+{{data.company_name}}

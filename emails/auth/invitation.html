@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    Hi,
+
+    <p>
+        {{invited_by}} has invited you to join the Intrview platform that we use to interview all mid-senior level candidates.
+    </p>
+
+    <p>
+        Please click on this <a href="{{data.invitation_link}}">link</a> to activate your account and start assessing candidates.
+    </p>
+
+    Thanks,<br />
+    {{data.invited_by}} <br />
+    {{data.company_name}}
+{% endblock %}

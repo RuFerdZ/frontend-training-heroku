@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+
+            <h5>Hi, </h5>
+
+            You have been invited to the project :  {{data.project_name}}. <br/>
+
+            Use the following link to accept the invitation. <br/>
+            
+            <a href="{{data.invite_url}}">{{data.invite_url}}</a> <br/><br/><br/>
+
+            Thank you!
+
+
+        </div>
+    </body>
+</html>

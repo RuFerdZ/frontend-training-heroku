@@ -1,0 +1,7 @@
+Hi,
+
+Please use the following verification code to login to the account.
+
+{{data.verification_code}}
+
+Thank you!

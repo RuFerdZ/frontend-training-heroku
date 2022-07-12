@@ -1,0 +1,9 @@
+Hi,
+
+You have been invited to the project : {{data.project_name}}. <br/>
+
+Use the following link to accept the invitation.
+            
+{{data.invite_url}}
+
+Thank you!
