@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', '!94cvjzfvjm9u%q&6dfsgx0_t$^vd_7(%v(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=0)) == 0
 
-ALLOWED_HOSTS = ['localhost', 'apps.avantrio.xyz', os.environ.get('APP_HOST', '')]
+ALLOWED_HOSTS = ['localhost', 'apps.avantrio.xyz', os.environ.get('APP_HOST', ''), 'avantrio-frontend-training.herokuapp.com']
 
 # Application definition
 
