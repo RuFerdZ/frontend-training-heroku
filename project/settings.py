@@ -80,14 +80,16 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# postgres://xjhrxblomicsbk:cc0e1e36d7eecddf22d1ea5e2f8aa90fe9306069da343a4ca05181a1fb50822c@ec2-52-49-120-150.eu-west-1.compute.amazonaws.com:5432/df82id7ktfqhub
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DATABASE_NAME', 'boilerplate'),
-        'USER': os.environ.get('DATABASE_USER', 'root'),
-        'PASSWORD': os.environ.get('DATABASE_PWD', 'admin'),
-        'HOST': os.environ.get('DATABASE_HOST', 'localhost'),
+        'NAME': os.environ.get('DATABASE_NAME', 'df82id7ktfqhub'),
+        'USER': os.environ.get('DATABASE_USER', 'xjhrxblomicsbk'),
+        'PASSWORD': os.environ.get('DATABASE_PWD', 'cc0e1e36d7eecddf22d1ea5e2f8aa90fe9306069da343a4ca05181a1fb50822c'),
+        'HOST': os.environ.get('DATABASE_HOST', 'ec2-52-49-120-150.eu-west-1.compute.amazonaws.com'),
         'PORT': os.environ.get("DATABASE_PORT", '5432'),
         'TEST': {
             'NAME': 'boilerplate_test',
