@@ -65,14 +65,15 @@ class AuthViewSet(ViewSet):
 class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
 
-    def get_permissions(self):
-        if self.action == 'me':
-            permission_classes = [IsAuthenticated]
-        else:
-            permission_classes = [IsAuthenticated, IsAdminUser]
-
-        return [permission() for permission in permission_classes]
+    # def get_permissions(self):
+    #     if self.action == 'me':
+    #         permission_classes = [IsAuthenticated]
+    #     else:
+    #         permission_classes = [IsAuthenticated, IsAdminUser]
+    #
+    #     return [permission() for permission in permission_classes]
 
     def perform_destroy(self, instance):
         instance.is_active = False
@@ -83,8 +84,12 @@ class UserViewSet(ModelViewSet):
 
     @action(detail=False, methods=['get', 'put', 'patch'])
     def me(self, request):
-        if request.method == 'get':
-            serializer = UserSerializer(request.user)
+        print("\n\nado ado")
+        print(request.method)
+        print(request.user)
+        if request.method == 'GET':
+            user = User.objects.filter(email=request.user.email)
+            serializer = UserSerializer(user, many=True)
             return Response(serializer.data)
         else:
             serializer = ProfileUpdateSerializer(data=request.data, instance=request.user, partial=True)
