@@ -45,7 +45,7 @@ class AuthRegisterSerializer(serializers.ModelSerializer):
         try:
             user = create_user(validated_data)
             if settings.VERIFY_EMAIL:
-                user.is_active = False
+                user.is_active = True
                 user.save()
                 user.generate_email_verification_code()
             return user
