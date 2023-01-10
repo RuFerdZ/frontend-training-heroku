@@ -86,10 +86,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DATABASE_NAME', 'df82id7ktfqhub'),
-        'USER': os.environ.get('DATABASE_USER', 'xjhrxblomicsbk'),
-        'PASSWORD': os.environ.get('DATABASE_PWD', 'cc0e1e36d7eecddf22d1ea5e2f8aa90fe9306069da343a4ca05181a1fb50822c'),
-        'HOST': os.environ.get('DATABASE_HOST', 'ec2-52-49-120-150.eu-west-1.compute.amazonaws.com'),
+        'NAME': os.environ.get('DATABASE_NAME', 'd7tq66c38vhell'),
+        'USER': os.environ.get('DATABASE_USER', 'uzhrqoulezikud'),
+        'PASSWORD': os.environ.get('DATABASE_PWD', '251466c1bfc238236cdff92ddd7e1d7e3c0316128b6b03e41c79e86fe1148292'),
+        'HOST': os.environ.get('DATABASE_HOST', 'ec2-34-248-169-69.eu-west-1.compute.amazonaws.com'),
         'PORT': os.environ.get("DATABASE_PORT", '5432'),
         'TEST': {
             'NAME': 'boilerplate_test',
