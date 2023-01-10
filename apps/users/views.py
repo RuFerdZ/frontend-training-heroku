@@ -84,9 +84,7 @@ class UserViewSet(ModelViewSet):
 
     @action(detail=False, methods=['get', 'put', 'patch'])
     def me(self, request):
-        print("\n\nado ado")
-        print(request.method)
-        print(request.user)
+
         if request.method == 'GET':
             user = User.objects.filter(email=request.user.email)
             serializer = UserSerializer(user, many=True)
