@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.7-alpine@sha256:c9c2d6f97a00b211def3818830883495417e3b1fd34783ce6135c5fc03b5ee87
 
 COPY ./requirements.txt /app/
 
